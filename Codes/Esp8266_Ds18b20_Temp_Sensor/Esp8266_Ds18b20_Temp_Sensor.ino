@@ -10,26 +10,43 @@
      + connect VCC (3.3V) to the appropriate DS18B20 pin (VDD)
      + connect GND to the appopriate DS18B20 pin (GND)
      + connect D4 to the DS18B20 data pin (DQ)
-     + connect a 4.7K resistor between DQ and VCC.
+     + connect a 4.7K resistor between DATA and VCC.
 */
 
 #include <ESP8266WiFi.h>
+#include <WiFiClient.h>
+#include <IPAddress.h>
 #include <PubSubClient.h>
 #include <OneWire.h>
 #include <DallasTemperature.h>
-//#include <Streaming.h>
 
-#define SLEEP_DELAY_IN_SECONDS  30
-#define ONE_WIRE_BUS            2      // DS18B20 pin
+//#define SERIAL_EN             //comment this out when deploying to an installed SM to save a few KB of sketch size
+#define SERIAL_BAUD    115200
+#ifdef SERIAL_EN
+#define DEBUG(input)   {Serial.print(input); delay(1);}
+#define DEBUGln(input) {Serial.println(input); delay(1);}
+#else
+#define DEBUG(input);
+#define DEBUGln(input);
+#endif
+
+#define SLEEP_DELAY_IN_SECONDS  900
+#define ONE_WIRE_BUS            2      // DS18B20 pin (D4)
 
 const char* ssid = "Sandiego";
 const char* password = "0988807067";
 
+const char* client_id = "TempSensor1";
+// use public MQTT broker
 //const char* mqtt_server = "broker.hivemq.com";
-const char* mqtt_server = "192.168.1.120";
+// use local MQTT broker at home network
+const char* mqtt_server = "192.168.1.110";
 const char* mqtt_username = "<MQTT_BROKER_USERNAME>";
 const char* mqtt_password = "<MQTT_BROKER_PASSWORD>";
-const char* mqtt_topic = "vanminh0910/temperature";
+const char* temp_topic = "TempSensor1/temperature"; // change to something unique
+const char* vdd_topic = "TempSensor1/battery"; // change to something unique
+
+ADC_MODE(ADC_VCC); //vcc read
 
 WiFiClient espClient;
 PubSubClient client(espClient);
@@ -38,10 +55,13 @@ OneWire oneWire(ONE_WIRE_BUS);
 DallasTemperature DS18B20(&oneWire);
 
 char temperatureString[6];
+char vddString[4];
+long setupStartMillis;
 
 void setup() {
-  // setup serial port
-  Serial.begin(115200);
+  setupStartMillis = millis();
+  Serial.begin(SERIAL_BAUD);
+  DEBUG("Setup start millis: "); DEBUGln(setupStartMillis);
 
   // setup WiFi
   setup_wifi();
@@ -53,23 +73,25 @@ void setup() {
 }
 
 void setup_wifi() {
-  delay(10);
   // We start by connecting to a WiFi network
-  Serial.println();
-  Serial.print("Connecting to ");
-  Serial.println(ssid);
+  DEBUG("Connecting to "); DEBUGln(ssid);
 
   WiFi.begin(ssid, password);
+  //uncomment to use static ip to shorten config time
+  WiFi.config(IPAddress(192,168,1,200), IPAddress(192,168,1,100), IPAddress(255,255,255,0));
 
   while (WiFi.status() != WL_CONNECTED) {
-    delay(500);
+    delay(200);
     Serial.print(".");
   }
+
+  long duration = millis()-setupStartMillis;
 
   Serial.println("");
   Serial.println("WiFi connected");
   Serial.println("IP address: ");
   Serial.println(WiFi.localIP());
+  Serial.print("Duration: "); Serial.println(duration);
 }
 
 void callback(char* topic, byte* payload, unsigned int length) {
@@ -87,7 +109,7 @@ void reconnect() {
   while (!client.connected()) {
     Serial.print("Attempting MQTT connection...");
     // Attempt to connect
-    if (client.connect("ESP8266Client", mqtt_username, mqtt_password)) {
+    if (client.connect(client_id, mqtt_username, mqtt_password)) {
       Serial.println("connected");
     } else {
       Serial.print("failed, rc=");
@@ -122,19 +144,20 @@ void loop() {
   // send temperature to the serial console
   Serial.print("Sending temperature: "); Serial.println(temperatureString);
   // send temperature to the MQTT topic
-  client.publish(mqtt_topic, temperatureString);
-  delay(500);
+  client.publish(temp_topic, temperatureString);
+  // read battery status
+  float vdd = ESP.getVcc() / 1000.0;
+  // convert battery status to a string
+  dtostrf(vdd, 1, 1, vddString);
+  // send to the serial console
+  Serial.print("Sending battery status: "); Serial.println(vddString);
+  // send vdd status to the MQTT topic
+  client.publish(vdd_topic, vddString);
+  delay(100);
 
   Serial.print("Closing MQTT connection...");
   client.disconnect();
 
-  Serial.print("Closing WiFi connection...");
-  WiFi.disconnect();
-
-  delay(100);
-
   Serial.print("Entering deep sleep mode for "); Serial.print(SLEEP_DELAY_IN_SECONDS); Serial.println(" seconds...");
   ESP.deepSleep(SLEEP_DELAY_IN_SECONDS * 1000000, WAKE_RF_DEFAULT);
-  //ESP.deepSleep(10 * 1000, WAKE_NO_RFCAL);
-  delay(500);   // wait for deep sleep to happen
 }
