@@ -2128,7 +2128,7 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <part name="GND3" library="SparkFun" deviceset="GND" device=""/>
 <part name="GND6" library="SparkFun" deviceset="GND" device=""/>
 <part name="SW1" library="MySMD" deviceset="PB157" device="" value="RST"/>
-<part name="SW2" library="MySMD" deviceset="PB157" device="" value="PR"/>
+<part name="SW2" library="MySMD" deviceset="PB157" device="" value="FLASH"/>
 </parts>
 <sheets>
 <sheet>
