@@ -2104,7 +2104,6 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <part name="JP1" library="adafruit" deviceset="PINHD-1X9" device=""/>
 <part name="JP2" library="adafruit" deviceset="PINHD-1X9" device=""/>
 <part name="C1" library="SparkFun-Passives" deviceset="CAP" device="0805" value="1uF"/>
-<part name="C3" library="SparkFun-Passives" deviceset="CAP" device="0805" value="22nF"/>
 <part name="C2" library="SparkFun-Capacitors" deviceset="22UF-6.3V-20%(0805)" device="" value="1uF"/>
 <part name="RT9013" library="SparkFun-PowerIC" deviceset="V_REG_MIC5205" device="3.3V" value="3.3V/500mA"/>
 <part name="GND4" library="SparkFun" deviceset="GND" device=""/>
@@ -2139,7 +2138,6 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <instance part="JP1" gate="G$1" x="129.54" y="142.24"/>
 <instance part="JP2" gate="G$1" x="139.7" y="142.24" rot="R180"/>
 <instance part="C1" gate="G$1" x="45.72" y="134.62"/>
-<instance part="C3" gate="G$1" x="81.28" y="137.16"/>
 <instance part="C2" gate="G$1" x="86.36" y="144.78"/>
 <instance part="RT9013" gate="U1" x="68.58" y="147.32"/>
 <instance part="GND4" gate="1" x="45.72" y="127"/>
@@ -2188,8 +2186,6 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <pinref part="C2" gate="G$1" pin="2"/>
 <pinref part="GND5" gate="1" pin="GND"/>
 <wire x1="86.36" y1="142.24" x2="86.36" y2="134.62" width="0.1524" layer="91"/>
-<pinref part="C3" gate="G$1" pin="2"/>
-<wire x1="81.28" y1="134.62" x2="86.36" y2="134.62" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <wire x1="167.64" y1="152.4" x2="172.72" y2="152.4" width="0.1524" layer="91"/>
@@ -2494,13 +2490,6 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <wire x1="167.64" y1="144.78" x2="172.72" y2="144.78" width="0.1524" layer="91"/>
 <label x="172.72" y="144.78" size="1.778" layer="95"/>
 <pinref part="FTDI" gate="G$1" pin="1"/>
-</segment>
-</net>
-<net name="BP" class="0">
-<segment>
-<pinref part="RT9013" gate="U1" pin="BP"/>
-<pinref part="C3" gate="G$1" pin="1"/>
-<wire x1="76.2" y1="142.24" x2="81.28" y2="142.24" width="0.1524" layer="91"/>
 </segment>
 </net>
 </nets>
