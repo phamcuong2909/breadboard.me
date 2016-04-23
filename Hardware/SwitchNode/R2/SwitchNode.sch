@@ -4091,7 +4091,7 @@ Source: http://www.mouser.com/ds/2/392/products_18-2245.pdf</description>
 <wire x1="-15.635" y1="-10" x2="-15.635" y2="10" width="0.127" layer="21"/>
 <pad name="AC_L" x="-13.8" y="7.6" drill="1.1176" diameter="1.8796" shape="long"/>
 <pad name="AC_N" x="-13.8" y="2.5" drill="1.1176" diameter="1.8796" shape="long"/>
-<pad name="5V" x="13.2" y="-3" drill="1.1176" diameter="1.8796" shape="long"/>
+<pad name="5V" x="13.2" y="-7.82" drill="1.1176" diameter="1.8796" shape="long"/>
 <pad name="GND" x="13.2" y="2.3" drill="1.1176" diameter="1.8796" shape="long"/>
 </package>
 <package name="MINI-ESP">
@@ -4157,10 +4157,10 @@ Source: http://www.mouser.com/ds/2/392/products_18-2245.pdf</description>
 <wire x1="-10.795" y1="12.954" x2="-9.525" y2="12.954" width="0.2032" layer="21"/>
 <pad name="VIN" x="-10.16" y="-8.636" drill="1.016" diameter="1.8796" rot="R180"/>
 <pad name="VCC" x="-10.16" y="-6.096" drill="1.016" diameter="1.8796" rot="R180"/>
-<pad name="D7" x="-10.16" y="-3.556" drill="1.016" diameter="1.8796" rot="R180"/>
-<pad name="D6" x="-10.16" y="-1.016" drill="1.016" diameter="1.8796" rot="R180"/>
-<pad name="D5" x="-10.16" y="1.524" drill="1.016" diameter="1.8796" rot="R180"/>
-<pad name="D0" x="-10.16" y="4.064" drill="1.016" diameter="1.8796" rot="R180"/>
+<pad name="13" x="-10.16" y="-3.556" drill="1.016" diameter="1.8796" rot="R180"/>
+<pad name="12" x="-10.16" y="-1.016" drill="1.016" diameter="1.8796" rot="R180"/>
+<pad name="14" x="-10.16" y="1.524" drill="1.016" diameter="1.8796" rot="R180"/>
+<pad name="16" x="-10.16" y="4.064" drill="1.016" diameter="1.8796" rot="R180"/>
 <pad name="EN" x="-10.16" y="6.604" drill="1.016" diameter="1.8796" rot="R180"/>
 <pad name="A0" x="-10.16" y="9.144" drill="1.016" diameter="1.8796" rot="R180"/>
 <pad name="RST" x="-10.16" y="11.684" drill="1.016" diameter="1.8796" rot="R180"/>
@@ -4232,11 +4232,11 @@ Source: http://www.mouser.com/ds/2/392/products_18-2245.pdf</description>
 <wire x1="9.525" y1="12.954" x2="10.795" y2="12.954" width="0.2032" layer="21"/>
 <pad name="GND" x="10.16" y="-8.636" drill="1.016" diameter="1.8796" rot="R180"/>
 <pad name="GND2" x="10.16" y="-6.096" drill="1.016" diameter="1.8796" rot="R180"/>
-<pad name="D8" x="10.16" y="-3.556" drill="1.016" diameter="1.8796" rot="R180"/>
-<pad name="D4" x="10.16" y="-1.016" drill="1.016" diameter="1.8796" rot="R180"/>
-<pad name="D3" x="10.16" y="1.524" drill="1.016" diameter="1.8796" rot="R180"/>
-<pad name="D2" x="10.16" y="4.064" drill="1.016" diameter="1.8796" rot="R180"/>
-<pad name="D1" x="10.16" y="6.604" drill="1.016" diameter="1.8796" rot="R180"/>
+<pad name="15" x="10.16" y="-3.556" drill="1.016" diameter="1.8796" rot="R180"/>
+<pad name="2" x="10.16" y="-1.016" drill="1.016" diameter="1.8796" rot="R180"/>
+<pad name="0" x="10.16" y="1.524" drill="1.016" diameter="1.8796" rot="R180"/>
+<pad name="4" x="10.16" y="4.064" drill="1.016" diameter="1.8796" rot="R180"/>
+<pad name="5" x="10.16" y="6.604" drill="1.016" diameter="1.8796" rot="R180"/>
 <pad name="RX" x="10.16" y="9.144" drill="1.016" diameter="1.8796" rot="R180"/>
 <pad name="TX" x="10.16" y="11.684" drill="1.016" diameter="1.8796" rot="R180"/>
 <rectangle x1="9.906" y1="6.35" x2="10.414" y2="6.858" layer="51" rot="R90"/>
@@ -4352,23 +4352,23 @@ Source: http://www.mouser.com/ds/2/392/products_18-2245.pdf</description>
 <pin name="RST" x="-15.24" y="10.16" length="middle"/>
 <pin name="A0" x="-15.24" y="7.62" length="middle"/>
 <pin name="EN" x="-15.24" y="5.08" length="middle"/>
-<pin name="D0" x="-15.24" y="2.54" length="middle"/>
-<pin name="D5" x="-15.24" y="0" length="middle"/>
-<pin name="D6" x="-15.24" y="-2.54" length="middle"/>
-<pin name="D7" x="-15.24" y="-5.08" length="middle"/>
+<pin name="16" x="-15.24" y="2.54" length="middle"/>
+<pin name="14" x="-15.24" y="0" length="middle"/>
+<pin name="12" x="-15.24" y="-2.54" length="middle"/>
+<pin name="13" x="-15.24" y="-5.08" length="middle"/>
 <pin name="VCC" x="-15.24" y="-7.62" length="middle"/>
 <pin name="VIN" x="-15.24" y="-10.16" length="middle"/>
 <pin name="GND" x="15.24" y="-10.16" length="middle" rot="R180"/>
 <pin name="GND2" x="15.24" y="-7.62" length="middle" rot="R180"/>
-<pin name="D8" x="15.24" y="-5.08" length="middle" rot="R180"/>
-<pin name="D4" x="15.24" y="-2.54" length="middle" rot="R180"/>
-<pin name="D3" x="15.24" y="0" length="middle" rot="R180"/>
-<pin name="D2" x="15.24" y="2.54" length="middle" rot="R180"/>
-<pin name="D1" x="15.24" y="5.08" length="middle" rot="R180"/>
+<pin name="15" x="15.24" y="-5.08" length="middle" rot="R180"/>
+<pin name="2" x="15.24" y="-2.54" length="middle" rot="R180"/>
+<pin name="0" x="15.24" y="0" length="middle" rot="R180"/>
+<pin name="4" x="15.24" y="2.54" length="middle" rot="R180"/>
+<pin name="5" x="15.24" y="5.08" length="middle" rot="R180"/>
 <pin name="RX" x="15.24" y="7.62" length="middle" rot="R180"/>
 <pin name="TX" x="15.24" y="10.16" length="middle" rot="R180"/>
 <text x="-10.16" y="15.24" size="1.778" layer="94">&gt;NAME</text>
-<text x="2.794" y="-4.318" size="1.778" layer="94" rot="R90">Mini-Esp</text>
+<text x="2.794" y="-4.318" size="1.778" layer="94" rot="R90">Sandy R2</text>
 </symbol>
 <symbol name="MINIATURE_RELAY_JRC_21F">
 <wire x1="5.08" y1="7.62" x2="5.08" y2="5.08" width="0.254" layer="94"/>
@@ -4440,16 +4440,16 @@ Source: http://www.mouser.com/ds/2/392/products_18-2245.pdf</description>
 <devices>
 <device name="" package="MINI-ESP">
 <connects>
+<connect gate="G$1" pin="0" pad="0"/>
+<connect gate="G$1" pin="12" pad="12"/>
+<connect gate="G$1" pin="13" pad="13"/>
+<connect gate="G$1" pin="14" pad="14"/>
+<connect gate="G$1" pin="15" pad="15"/>
+<connect gate="G$1" pin="16" pad="16"/>
+<connect gate="G$1" pin="2" pad="2"/>
+<connect gate="G$1" pin="4" pad="4"/>
+<connect gate="G$1" pin="5" pad="5"/>
 <connect gate="G$1" pin="A0" pad="A0"/>
-<connect gate="G$1" pin="D0" pad="D0"/>
-<connect gate="G$1" pin="D1" pad="D1"/>
-<connect gate="G$1" pin="D2" pad="D2"/>
-<connect gate="G$1" pin="D3" pad="D3"/>
-<connect gate="G$1" pin="D4" pad="D4"/>
-<connect gate="G$1" pin="D5" pad="D5"/>
-<connect gate="G$1" pin="D6" pad="D6"/>
-<connect gate="G$1" pin="D7" pad="D7"/>
-<connect gate="G$1" pin="D8" pad="D8"/>
 <connect gate="G$1" pin="EN" pad="EN"/>
 <connect gate="G$1" pin="GND" pad="GND"/>
 <connect gate="G$1" pin="GND2" pad="GND2"/>
@@ -5450,6 +5450,7 @@ Standard 4-pin 0.1" header. Use with straight break away headers (SKU : PRT-0011
 <segment>
 <pinref part="JP1" gate="G$1" pin="4"/>
 <wire x1="193.04" y1="119.38" x2="200.66" y2="119.38" width="0.1524" layer="91"/>
+<label x="200.66" y="119.38" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="5V" class="0">
@@ -5493,6 +5494,7 @@ Standard 4-pin 0.1" header. Use with straight break away headers (SKU : PRT-0011
 <segment>
 <pinref part="JP1" gate="G$1" pin="1"/>
 <wire x1="193.04" y1="111.76" x2="200.66" y2="111.76" width="0.1524" layer="91"/>
+<label x="200.66" y="111.76" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="VCC" class="0">
@@ -5510,9 +5512,9 @@ Standard 4-pin 0.1" header. Use with straight break away headers (SKU : PRT-0011
 <label x="218.44" y="139.7" size="1.778" layer="95" rot="R180"/>
 </segment>
 </net>
-<net name="D0" class="0">
+<net name="16" class="0">
 <segment>
-<pinref part="U$2" gate="G$1" pin="D0"/>
+<pinref part="U$2" gate="G$1" pin="16"/>
 <wire x1="119.38" y1="114.3" x2="106.68" y2="114.3" width="0.1524" layer="91"/>
 </segment>
 </net>
@@ -5542,6 +5544,7 @@ Standard 4-pin 0.1" header. Use with straight break away headers (SKU : PRT-0011
 <segment>
 <pinref part="JP1" gate="G$1" pin="2"/>
 <wire x1="193.04" y1="114.3" x2="200.66" y2="114.3" width="0.1524" layer="91"/>
+<label x="200.66" y="114.3" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="RX" class="0">
@@ -5552,11 +5555,12 @@ Standard 4-pin 0.1" header. Use with straight break away headers (SKU : PRT-0011
 <segment>
 <pinref part="JP1" gate="G$1" pin="3"/>
 <wire x1="193.04" y1="116.84" x2="200.66" y2="116.84" width="0.1524" layer="91"/>
+<label x="200.66" y="116.84" size="1.778" layer="95"/>
 </segment>
 </net>
-<net name="D2" class="0">
+<net name="4" class="0">
 <segment>
-<pinref part="U$2" gate="G$1" pin="D2"/>
+<pinref part="U$2" gate="G$1" pin="4"/>
 <wire x1="149.86" y1="114.3" x2="165.1" y2="114.3" width="0.1524" layer="91"/>
 </segment>
 <segment>
@@ -5565,9 +5569,9 @@ Standard 4-pin 0.1" header. Use with straight break away headers (SKU : PRT-0011
 <label x="190.5" y="144.78" size="1.778" layer="95" rot="R180" xref="yes"/>
 </segment>
 </net>
-<net name="D1" class="0">
+<net name="5" class="0">
 <segment>
-<pinref part="U$2" gate="G$1" pin="D1"/>
+<pinref part="U$2" gate="G$1" pin="5"/>
 <wire x1="149.86" y1="116.84" x2="165.1" y2="116.84" width="0.1524" layer="91"/>
 </segment>
 <segment>
@@ -5576,15 +5580,15 @@ Standard 4-pin 0.1" header. Use with straight break away headers (SKU : PRT-0011
 <label x="190.5" y="142.24" size="1.778" layer="95" rot="R180" xref="yes"/>
 </segment>
 </net>
-<net name="D3" class="0">
+<net name="0" class="0">
 <segment>
-<pinref part="U$2" gate="G$1" pin="D3"/>
+<pinref part="U$2" gate="G$1" pin="0"/>
 <wire x1="149.86" y1="111.76" x2="165.1" y2="111.76" width="0.1524" layer="91"/>
 </segment>
 </net>
-<net name="D4" class="0">
+<net name="2" class="0">
 <segment>
-<pinref part="U$2" gate="G$1" pin="D4"/>
+<pinref part="U$2" gate="G$1" pin="2"/>
 <wire x1="149.86" y1="109.22" x2="165.1" y2="109.22" width="0.1524" layer="91"/>
 </segment>
 <segment>
@@ -5595,18 +5599,18 @@ Standard 4-pin 0.1" header. Use with straight break away headers (SKU : PRT-0011
 </net>
 <net name="D8" class="0">
 <segment>
-<pinref part="U$2" gate="G$1" pin="D8"/>
+<pinref part="U$2" gate="G$1" pin="15"/>
 <wire x1="149.86" y1="106.68" x2="165.1" y2="106.68" width="0.1524" layer="91"/>
 </segment>
 </net>
-<net name="D7" class="0">
+<net name="13" class="0">
 <segment>
 <pinref part="R1" gate="G$1" pin="1"/>
 <wire x1="231.14" y1="134.62" x2="238.76" y2="134.62" width="0.1524" layer="91"/>
 <label x="231.14" y="134.62" size="1.778" layer="95"/>
 </segment>
 <segment>
-<pinref part="U$2" gate="G$1" pin="D7"/>
+<pinref part="U$2" gate="G$1" pin="13"/>
 <wire x1="119.38" y1="106.68" x2="106.68" y2="106.68" width="0.1524" layer="91"/>
 </segment>
 <segment>
@@ -5615,9 +5619,9 @@ Standard 4-pin 0.1" header. Use with straight break away headers (SKU : PRT-0011
 <label x="213.36" y="142.24" size="1.778" layer="95" xref="yes"/>
 </segment>
 </net>
-<net name="D6" class="0">
+<net name="12" class="0">
 <segment>
-<pinref part="U$2" gate="G$1" pin="D6"/>
+<pinref part="U$2" gate="G$1" pin="12"/>
 <wire x1="119.38" y1="109.22" x2="106.68" y2="109.22" width="0.1524" layer="91"/>
 </segment>
 <segment>
@@ -5631,9 +5635,9 @@ Standard 4-pin 0.1" header. Use with straight break away headers (SKU : PRT-0011
 <label x="231.14" y="99.06" size="1.778" layer="95"/>
 </segment>
 </net>
-<net name="D5" class="0">
+<net name="14" class="0">
 <segment>
-<pinref part="U$2" gate="G$1" pin="D5"/>
+<pinref part="U$2" gate="G$1" pin="14"/>
 <wire x1="119.38" y1="111.76" x2="106.68" y2="111.76" width="0.1524" layer="91"/>
 </segment>
 <segment>
