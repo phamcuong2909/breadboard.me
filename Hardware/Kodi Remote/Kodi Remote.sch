@@ -4312,8 +4312,6 @@ Basic schematic elements and footprints for 0603, 1206, and PTH resistors.</desc
 <part name="GND5" library="SparkFun" deviceset="GND" device=""/>
 <part name="GND6" library="SparkFun" deviceset="GND" device=""/>
 <part name="RF_SIGNAL" library="adafruit" deviceset="LED" device="3MM" value="RF"/>
-<part name="IR_SIGNAL" library="adafruit" deviceset="LED" device="3MM" value="IR_RECV"/>
-<part name="R1" library="SparkFun-Resistors" deviceset="RESISTOR" device="0805-RES" value="200"/>
 <part name="R2" library="SparkFun-Resistors" deviceset="RESISTOR" device="0805-RES" value="200"/>
 <part name="GND7" library="SparkFun" deviceset="GND" device=""/>
 <part name="MICRO-USB" library="SparkFun-Connectors" deviceset="USB_MICROB_PLUG" device="CONN-11752"/>
@@ -4351,8 +4349,6 @@ Basic schematic elements and footprints for 0603, 1206, and PTH resistors.</desc
 <instance part="GND5" gate="1" x="147.32" y="-66.04"/>
 <instance part="GND6" gate="1" x="175.26" y="-73.66"/>
 <instance part="RF_SIGNAL" gate="G$1" x="172.72" y="-45.72" rot="R180"/>
-<instance part="IR_SIGNAL" gate="G$1" x="271.78" y="15.24"/>
-<instance part="R1" gate="G$1" x="271.78" y="2.54" rot="R90"/>
 <instance part="R2" gate="G$1" x="180.34" y="-38.1" rot="R180"/>
 <instance part="GND7" gate="1" x="190.5" y="-38.1" rot="R90"/>
 <instance part="MICRO-USB" gate="G$1" x="152.4" y="58.42" rot="R180"/>
@@ -4394,11 +4390,8 @@ Basic schematic elements and footprints for 0603, 1206, and PTH resistors.</desc
 </segment>
 <segment>
 <pinref part="TSOP1838" gate="G$1" pin="GND"/>
-<wire x1="266.7" y1="17.78" x2="266.7" y2="-2.54" width="0.1524" layer="91"/>
+<wire x1="266.7" y1="17.78" x2="266.7" y2="-5.08" width="0.1524" layer="91"/>
 <pinref part="GND1" gate="1" pin="GND"/>
-<pinref part="R1" gate="G$1" pin="1"/>
-<wire x1="266.7" y1="-2.54" x2="266.7" y2="-5.08" width="0.1524" layer="91"/>
-<wire x1="271.78" y1="-2.54" x2="266.7" y2="-2.54" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <pinref part="GND3" gate="1" pin="GND"/>
@@ -4614,11 +4607,8 @@ Basic schematic elements and footprints for 0603, 1206, and PTH resistors.</desc
 </segment>
 <segment>
 <pinref part="TSOP1838" gate="G$1" pin="OUT"/>
-<wire x1="266.7" y1="22.86" x2="271.78" y2="22.86" width="0.1524" layer="91"/>
 <label x="274.32" y="25.4" size="1.778" layer="95" rot="R180"/>
-<pinref part="IR_SIGNAL" gate="G$1" pin="A"/>
-<wire x1="271.78" y1="22.86" x2="276.86" y2="22.86" width="0.1524" layer="91"/>
-<wire x1="271.78" y1="22.86" x2="271.78" y2="17.78" width="0.1524" layer="91"/>
+<wire x1="266.7" y1="22.86" x2="276.86" y2="22.86" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="15" class="0">
@@ -4726,13 +4716,6 @@ Basic schematic elements and footprints for 0603, 1206, and PTH resistors.</desc
 <pinref part="IR8" gate="G$1" pin="C"/>
 <wire x1="177.8" y1="-17.78" x2="220.98" y2="-17.78" width="0.1524" layer="91"/>
 <wire x1="220.98" y1="-17.78" x2="220.98" y2="20.32" width="0.1524" layer="91"/>
-</segment>
-</net>
-<net name="N$3" class="0">
-<segment>
-<pinref part="IR_SIGNAL" gate="G$1" pin="C"/>
-<wire x1="271.78" y1="10.16" x2="271.78" y2="7.62" width="0.1524" layer="91"/>
-<pinref part="R1" gate="G$1" pin="2"/>
 </segment>
 </net>
 <net name="N$1" class="0">
