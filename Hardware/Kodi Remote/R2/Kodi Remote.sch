@@ -3691,6 +3691,10 @@ Basic schematic elements and footprints for 0603, 1206, and PTH resistors.</desc
 <wire x1="104.14" y1="-17.78" x2="104.14" y2="-27.94" width="0.1524" layer="91"/>
 <pinref part="GND9" gate="1" pin="GND"/>
 </segment>
+<segment>
+<pinref part="U$10" gate="G$1" pin="GND"/>
+<wire x1="172.72" y1="48.26" x2="177.8" y2="48.26" width="0.1524" layer="91"/>
+</segment>
 </net>
 <net name="NC" class="0">
 <segment>
@@ -3778,12 +3782,6 @@ Basic schematic elements and footprints for 0603, 1206, and PTH resistors.</desc
 <wire x1="119.38" y1="-17.78" x2="114.3" y2="-17.78" width="0.1524" layer="91"/>
 </segment>
 </net>
-<net name="GND1" class="0">
-<segment>
-<pinref part="U$10" gate="G$1" pin="GND"/>
-<wire x1="172.72" y1="48.26" x2="177.8" y2="48.26" width="0.1524" layer="91"/>
-</segment>
-</net>
 <net name="5V" class="0">
 <segment>
 <pinref part="U$10" gate="G$1" pin="5V"/>
@@ -3800,25 +3798,25 @@ Basic schematic elements and footprints for 0603, 1206, and PTH resistors.</desc
 <label x="147.32" y="-53.34" size="1.778" layer="95"/>
 </segment>
 </net>
-<net name="A1" class="0">
+<net name="A0" class="0">
 <segment>
 <pinref part="U$10" gate="G$1" pin="A0"/>
 <wire x1="147.32" y1="60.96" x2="142.24" y2="60.96" width="0.1524" layer="91"/>
 </segment>
 </net>
-<net name="RST1" class="0">
+<net name="RST" class="0">
 <segment>
 <pinref part="U$10" gate="G$1" pin="RST"/>
 <wire x1="147.32" y1="63.5" x2="142.24" y2="63.5" width="0.1524" layer="91"/>
 </segment>
 </net>
-<net name="TX1" class="0">
+<net name="TX" class="0">
 <segment>
 <pinref part="U$10" gate="G$1" pin="TX"/>
 <wire x1="172.72" y1="63.5" x2="177.8" y2="63.5" width="0.1524" layer="91"/>
 </segment>
 </net>
-<net name="RX1" class="0">
+<net name="RX" class="0">
 <segment>
 <pinref part="U$10" gate="G$1" pin="RX"/>
 <wire x1="172.72" y1="60.96" x2="177.8" y2="60.96" width="0.1524" layer="91"/>
