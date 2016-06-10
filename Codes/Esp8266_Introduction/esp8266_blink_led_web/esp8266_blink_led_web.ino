@@ -1,9 +1,9 @@
 #include <ESP8266WiFi.h>
  
-const char* ssid = "Sandiego";
-const char* password = "0988807067";
+const char* ssid = "your-wifi-network";
+const char* password = "your-wifi-password";
  
-int ledPin = 14; // GPIO14
+int ledPin = 2;
 WiFiServer server(80);
  
 void setup() {
@@ -59,8 +59,7 @@ void loop() {
   Serial.println(request);
   client.flush();
    
-  // Match the request
- 
+  // Match the request 
   int value = LOW;
   if (request.indexOf("/LED=ON") != -1) {
     digitalWrite(ledPin, HIGH);
@@ -69,11 +68,7 @@ void loop() {
   if (request.indexOf("/LED=OFF") != -1){
     digitalWrite(ledPin, LOW);
     value = LOW;
-  }
- 
-// Set ledPin according to the request
-//digitalWrite(ledPin, value);
-   
+  }  
  
   // Return the response
   client.println("HTTP/1.1 200 OK");
@@ -90,8 +85,8 @@ void loop() {
     client.print("Off");
   }
   client.println("<br><br>");
-  client.println("Click <a href=\"/LED=ON\">here</a> turn the LED on pin 14 ON<br>");
-  client.println("Click <a href=\"/LED=OFF\">here</a> turn the LED on pin 14 OFF<br>");
+  client.println("Click <a href=\"/LED=ON\">here</a> to turn the LED ON<br>");
+  client.println("Click <a href=\"/LED=OFF\">here</a> to turn the LED OFF<br>");
   client.println("</html>");
  
   delay(1);
